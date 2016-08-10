@@ -8,7 +8,7 @@ class MicroAggressionsController < ApplicationController
 	end
 
 	def new
-		@micro = Micro.new
+		@micro = MicroAggression.new
 	end
 
 	def create

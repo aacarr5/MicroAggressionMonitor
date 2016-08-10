@@ -1,0 +1,7 @@
+= simple_form_for @micro do |f|
+ =f.input :location
+ =f.input :aggressor
+ =f.input :description, as: :text
+ =f.input :severity
+ =f.date_field :date, :value => Date.today
+ =f.button :submit

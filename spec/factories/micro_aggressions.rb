@@ -8,5 +8,6 @@ FactoryGirl.define do
     description {Faker::Lorem.sentence}
     aggressor 	{aggressors.sample} 
     severity 		{rand(1..10)}
+    date 				{Date.today}
   end
 end

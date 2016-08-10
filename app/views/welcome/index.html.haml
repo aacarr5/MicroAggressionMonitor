@@ -3,12 +3,11 @@
 
 
 - if user_signed_in?
-	%h3 To be Added
-	= link_to "Register Microaggression", new_microaggression_path
+	= link_to "Register Microaggression", new_micro_aggression_path
 - else
 	=link_to "Sign Up", new_user_registration_path
 	=link_to "Sign In", user_session_path
 
-
+%br
 -if user_signed_in?
 	=link_to 'Sign out', destroy_user_session_path, :method => :delete
