@@ -4,6 +4,6 @@ class User < ActiveRecord::Base
 
   include Demographics
 
-  has_many :micro_aggressions
+  has_many :micros
   
 end

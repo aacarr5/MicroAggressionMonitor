@@ -40,3 +40,7 @@ gem 'bourbon'
 gem 'bitters'
 gem 'neat'
 gem 'refills'
+
+#APP SPECIFIC
+gem 'd3-rails', '~> 3.5', '>= 3.5.16'
+gem 'active_model_serializers', '~> 0.10.2'
