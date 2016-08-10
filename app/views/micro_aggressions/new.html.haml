@@ -1,7 +1,8 @@
 = simple_form_for @micro do |f|
- =f.input :location
- =f.input :aggressor
+ =f.input :location, :collection => MicroAggression::LOCATIONS
+ =f.input :aggressor, :collection => MicroAggression::AGGRESSORS
  =f.input :description, as: :text
- =f.input :severity
+ =f.input :severity, :collection => [*1..5]
+ =f.label :date, "Date of Occurance"
  =f.date_field :date, :value => Date.today
  =f.button :submit
