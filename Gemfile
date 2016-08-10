@@ -19,6 +19,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'rspec-rails'
+	gem 'faker', '~> 1.6', '>= 1.6.6'
 end
 
 group :development do
@@ -33,7 +34,6 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 
 #TESTING
 gem 'pry'
-gem 'faker'
 
 #FORMATTING
 gem 'bourbon'
