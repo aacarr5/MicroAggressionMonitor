@@ -11,8 +11,8 @@ RSpec.describe MicroAggression, type: :model do
   	end
 
   	it 'associates' do
-  		user.micro_aggressions << micro
-  		expect(user.micro_aggressions.first).to eq(micro)
+  		user.micros << micro
+  		expect(user.micros.first).to eq(micro)
   	end
 
 

@@ -4,6 +4,6 @@ class User < ActiveRecord::Base
 
   include Demographics
 
-  has_many :micro_aggressions
+  has_many :micros, foreign_key: "user_id", class_name:"MicroAggression"
   
 end
