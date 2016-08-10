@@ -1,4 +1,4 @@
-class MicroAggression < ActiveRecord::Base
+class Micro < ActiveRecord::Base
 
 	include MicroTypes
 

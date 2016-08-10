@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe MicroAggression, type: :model do
+RSpec.describe Micro, type: :model do
   context 'initialziation' do
 
   	let(:user) {FactoryGirl.create(:user)}
-  	let(:micro) {FactoryGirl.create(:micro_aggression,user_id:nil)}
+  	let(:micro) {FactoryGirl.create(:micro,user_id:nil)}
 
   	it '#initialization' do 
   		expect(user).to be_a User
@@ -14,7 +14,6 @@ RSpec.describe MicroAggression, type: :model do
   		user.micros << micro
   		expect(user.micros.first).to eq(micro)
   	end
-
 
   end
 end

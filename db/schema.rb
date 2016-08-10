@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160810005835) do
+ActiveRecord::Schema.define(version: 20160810170355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "micro_aggressions", force: :cascade do |t|
+  create_table "micros", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "location"
     t.text     "description"

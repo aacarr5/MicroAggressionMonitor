@@ -3,11 +3,11 @@
 -if user_signed_in?
 	%div
 		= "Hello #{current_user.email}!"
-		= "You have #{current_user.micro_aggressions.count} registered"
+		= "You have #{current_user.micros.count} registered"
 
 %br
 - if user_signed_in?
-	= link_to "Register Microaggression", new_micro_aggression_path
+	= link_to "Register Microaggression", new_micro_path
 	= link_to "Check Out your Dashboard!", user_path
 - else
 	=link_to "Sign Up", new_user_registration_path
