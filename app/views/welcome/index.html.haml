@@ -8,6 +8,11 @@
 	=link_to "Sign Up", new_user_registration_path
 	=link_to "Sign In", user_session_path
 
+%div
+	= "Hello #{current_user.email}!"
+	= "You have #{current_user.micro_aggressions.count} registered"
+
+
 %br
 -if user_signed_in?
 	=link_to 'Sign out', destroy_user_session_path, :method => :delete

@@ -13,6 +13,11 @@ class MicroAggressionsController < ApplicationController
 
 	def create
 		@micro = current_user.micro_aggressions.build(micro_params)
+		if @micro.save
+			redirect_to '/'
+		else
+			render 'new'
+		end
 	end
 
 	def edit
@@ -27,7 +32,7 @@ class MicroAggressionsController < ApplicationController
 	private
 
 	def micro_params
-		params.require(:microaggression).permit(:user_id,:location,:description,:aggressor,:severity)
+		params.require(:micro_aggression).permit(:user_id,:location,:description,:aggressor,:severity)
 	end
 
 
