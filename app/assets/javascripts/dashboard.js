@@ -3,8 +3,15 @@ $.ajax({
 }).done(function(data) {
     var input = d3Prep(count(data, "aggressor"));
     drawPie(input);
+    createKey(input);
 })
 
+function createKey(data) {
+    var labels = [".family", ".coworker", ".superior", ".subordinate", ".patron", ".other"];
+    for (var datum in data) {
+        $(labels[datum]).append(data[datum].label + " count: " + data[datum].count)
+    }
+}
 
 function drawPie(data) {
     var width = 200;
@@ -41,6 +48,7 @@ function drawPie(data) {
 
 
 
+
 function count(data, key) {
     var output = {}
     for (var micro in data) {
@@ -64,12 +72,3 @@ function d3Prep(data) {
     }
     return output
 }
-
-
-
-
-
-
-
-
-
