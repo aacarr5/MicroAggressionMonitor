@@ -9,7 +9,10 @@ $.ajax({
 function createKey(data) {
     var labels = [".family", ".coworker", ".superior", ".subordinate", ".patron", ".other"];
     for (var datum in data) {
-        $(labels[datum]).append(data[datum].label + " count: " + data[datum].count)
+        if ({}.hasOwnProperty.call(datum, data)) {
+            $(labels[datum]).append(data[datum].label + " count: " + data[datum].count)
+        }
+    // $(labels[datum]).append(data[datum].label + " count: " + data[datum].count)
     }
 }
 
